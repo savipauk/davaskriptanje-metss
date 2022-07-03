@@ -1,0 +1,53 @@
+najsjevernija tocka: 46 33 N + 16 22 E 
+najjuznija tocka: 42 23 N + 16 21 E
+najzapadnija tocka: 45 29 N + 13 30 E
+najistocnija tocka: 46 33 N + 19 27 E
+
+46 33  42 24
+13 30  19 27
+
+
+Latitude: 1 deg = 110.574 km. Longitude: 1 deg = 111.320*cos(latitude) km
+
+max-result: 50
+search-radius: 10km
+
+lat 
+46.55  42.4
+lng
+13.5  19.45
+
+
+x x x H x x x
+H H H H H H H
+x H H x x x x
+x H H x x x x
+x x H H x x x
+x x H H x x x
+x x x H H x x
+
+
+
+func query(lat, lng, radius, results)
+    posalji request s parametrima
+
+prodavaonice = empty lista
+
+lng_value = 10 km to lng
+lat_value = 10 km to lat
+
+od lng = 13.5 do lng = 19.45 za lng_value
+    od lat = 46.55 do lat = 42.4 za lat_value
+        results = query(lat, long, 10km, 50 results )
+        prodavaonice += results
+
+result = empty lista
+foreach(json in prodavaonice)
+    bool postoji = false;
+    foreach(resultjson in result)
+        if(resultjson[id] == json[id])
+            postoji = true;
+            break;
+    if(!postoji) result.add(json)
+            
+return result
