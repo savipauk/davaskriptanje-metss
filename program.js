@@ -31,8 +31,8 @@ const maxLng = 19.45;
 const minLng = 13.5;
 
 // dok trazimo trgovine za kolko pomaknuti na lat ili na lng (na 10 km)
-const latChangeRate = 1 / (110574 / 10);
-const lngChangeRate = 1 / ((111320 * Math.cos(latChangeRate)) / 10);
+const latChangeRate = 1 / (110.574 / 10);
+const lngChangeRate = 1 / ((111.320 * Math.cos(latChangeRate)) / 10);
 
 // console.log("lat = " + latChangeRate + "\nlng = " + lngChangeRate);
 
@@ -138,7 +138,7 @@ function updateSite() {
   }
 
 
-   // Moja stranica
+  // Moja stranica
   const hostname = '127.0.0.1';
   const port = 3000;
 
